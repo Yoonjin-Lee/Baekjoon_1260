@@ -8,6 +8,8 @@ for i in range(m):
     a, b = map(int, input().split())
     graph[a].append(b)
     graph[b].append(a)
+    graph[a].sort()
+    graph[b].sort()
 
 def dfs(graph, v, visited):
     visited[v] = True
@@ -29,7 +31,6 @@ def bfs(graph, start, visited):
                 visited[i] = True
 
 
-#문제 있음
 dfs(graph, v, visited)
 visited = [False] * (n+1)
 print()
