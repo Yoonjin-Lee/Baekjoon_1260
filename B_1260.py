@@ -7,6 +7,7 @@ visited = [False] * 9
 for i in range(n):
     a, b = map(int, input().split())
     graph[a].append(b)
+    graph[b].append(a)
 
 def dfs(graph, v, visited):
     visited[v] = True
@@ -28,7 +29,9 @@ def bfs(gragh, start, visited):
                 visited[i] = True
 
 
-dfs(graph, v, visited)
+#dfs(graph, v, visited)
+
+print(graph)
 
 visited = [False] * 9
 
