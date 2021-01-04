@@ -29,6 +29,7 @@ def bfs(graph, start, visited):
                 visited[i] = True
 
 
+#문제 있음
 dfs(graph, v, visited)
 visited = [False] * (n+1)
 print()
